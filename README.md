@@ -1,4 +1,4 @@
-# Sprint 3 – Build a To do app – Part 1
+# Sprint 3 – Build a To do App – Part 1
 
 In today's assignment you are going to build a todo app using React and practicing on state. This assignment will be in two parts and tomorrow we will upgrade our our app to use local storage. 
 
@@ -12,7 +12,7 @@ The plan is to build a todo app which can:
 
 We’ll of course build this in react! Here’s the basic component structure we’re going to aim for:
 
-!(Todo app image)[http://izettle.github.io/tjejer-kodar-todo-app/assets/components-breakdown.png]
+![Todo app image](http://izettle.github.io/tjejer-kodar-todo-app/assets/components-breakdown.png)
 
 ## How to complete this assignment
 
@@ -25,6 +25,9 @@ In the `code` folder you will find a copy of the Technigo React starter project 
 On [React.js](https://reactjs.org/) there's actually an example of how to implement a simple todo app (scroll down to the examples on the page). Start by playing around with their code and implement the same functionality in your project. 
 
 Update their HTML to work with your CSS and then try yourself to implement that you can mark an item as completed. 
+
+### Hand in the assignment
+To complete this assignment, you need to fork this repository, add your code in the "code" folder, and then submit a pull request on GitHub (from your repository into the technigo one) for review. Read the guide on GitHub for more info on how to do this.
 
 ### :books: Reading List
 
