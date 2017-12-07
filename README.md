@@ -54,7 +54,11 @@ After completing this assignment you will be more confident in using React State
 
 ### :runner: Stretch Goals
 
-Done with the main assignment? Try and package your app into a Chrome extension. Also, you can add the app to your own portfolio. 
+Done with the main assignment? Here's some suggestions, big and small.
+
+1. Showing a message when the list is empty
+1. Preventing items with empty text from being added. A simple way to do this is to prevent the function that adds an item from being called from the Form component when the value of the text field is “”.
+1. Try and package your app into a Chrome extension.
 
 ⚠️ The guide below is from Tjejer Kodar in London 2015. I haven't had a chance to check if it is still correct or not. It should work, but have your finger ready on the google button if this doesn't work... ⚠️
 
