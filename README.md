@@ -8,7 +8,6 @@ The plan is to build a todo app which can:
 * Create a new item
 * Mark an item as complete
 * Remove items
-* Persist items between page reloads
 
 We’ll of course build this in react! Here’s the basic component structure we’re going to aim for:
 
@@ -62,8 +61,8 @@ Done with the main assignment? Here's some suggestions, big and small.
 
 ⚠️ The guide below is from Tjejer Kodar in London 2015. I haven't had a chance to check if it is still correct or not. It should work, but have your finger ready on the google button if this doesn't work... ⚠️
 
-Chrome extensions are surprisingly simple to create. By packing the app as an extension, you’ll be able to run your weather app by clicking a button in the toolbar. All you need to do to package your app is to create a manifest, give it an icon, then install it in chrome. To create the manifest, make a new file called manifest.json in the "code" folder of this project. Within it, place this:
-
+Chrome extensions are surprisingly simple to create. By packing the app as an extension, you’ll be able to run your todo app by clicking a button in the toolbar. All you need to do to package your app is to create a manifest, give it an icon, then install it in chrome. To create the manifest, make a new file called ´manifest.json´ in the ´code´ folder of this project. Within it, place this:
+```
 {
   "manifest_version": 2,
   "name": "Weather Dashboard",
@@ -74,4 +73,5 @@ Chrome extensions are surprisingly simple to create. By packing the app as an ex
     "default_popup": "index.html"
   }
 }
+```
 Finally, in chrome, go to Settings and then open Extensions in the sidebar. Make sure the ‘Developer mode’ checkbox is ticked, then click on the ‘Load unpacked extension’ button. Select this assignment's "code" folder and click ‘open’. You should now see the app in your extension list and and you should also see a new icon in Chrome! When you click the icon now, it’ll load your app in a popup. Just remember, when you make changes to your app, you may need to come back into the Chrome Extensions interface and click reload on your app.
