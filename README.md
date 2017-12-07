@@ -49,11 +49,12 @@ Learning how to think as a web developer is learning how to be an expert in prob
 ### :boom: Success!
 
 After completing this assignment you will be more confident in using React State for building smaller applications. 
+
 ---
 
 ### :runner: Stretch Goals
 
-The stretch goal of this task is to package your site as a chrome extension.
+Done with the main assignment? Try and package your app into a Chrome extension. Also, you can add the app to your own portfolio. 
 
 ⚠️ The guide below is from Tjejer Kodar in London 2015. I haven't had a chance to check if it is still correct or not. It should work, but have your finger ready on the google button if this doesn't work... ⚠️
 
