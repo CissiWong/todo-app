@@ -18,7 +18,7 @@ We’ll of course build this in react! Here’s the basic component structure we
 
 ### Project setup
 
-In the `code` folder you will find a copy of the Technigo React starter project which you can use as a base. In the `code`folder you will also find a pre-written CSS file – in case you don't want to focus on CSS for this assignment (Regardless you need to add the CSS file to your project). Also, feel free to change the CSS if you want to. 
+In the `code` folder you will find a copy of the Technigo React starter project which you can use as a base. In the `code`folder you will also find a pre-written CSS file, `style.css` – in case you don't want to focus on CSS for this assignment (Regardless you need to add the CSS file to your project). Also, feel free to change the CSS if you want to. 
 
 ### Lots of help
 
