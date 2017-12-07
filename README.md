@@ -1,4 +1,4 @@
-# Sprint 3 – Build a To do App – Part 1
+# Sprint 4 – Build a To do App – Part 1
 
 In today's assignment you are going to build a todo app using React and practicing on state. This assignment will be in two parts and tomorrow we will upgrade our our app to use local storage. 
 
