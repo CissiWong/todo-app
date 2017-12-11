@@ -1,38 +1,40 @@
 # Sprint 4 – Build a To do App – Part 1
 
-In today's assignment you are going to build a todo app using React and practicing on state. This assignment will be in two parts and tomorrow we will upgrade our our app to use local storage. 
+In today's assignment you are going to build a todo app using React. This assignment will be in two parts. Today's focus is on building the form and handling state changes, and tomorrow we will upgrade the app to use local storage to save state so that when the user reloads the page, they don't lose their todos.
 
 The plan is to build a todo app which can:
 
 * List all items
 * Create a new item
 * Mark an item as complete
-* Remove items
 
 We’ll of course build this in react! Here’s the basic component structure we’re going to aim for:
 
-![Todo app image](http://izettle.github.io/tjejer-kodar-todo-app/assets/components-breakdown.png)
+![Design](https://github.com/Technigo/assignment-todo-app-1/blob/master/components-breakdown.png)
 
 ## How to complete this assignment
 
 ### Project setup
 
-In the `code` folder you will find a copy of the Technigo React starter project which you can use as a base. In the `code`folder you will also find a pre-written CSS file, `style.css` – in case you don't want to focus on CSS for this assignment (Regardless you need to add the CSS file to your project). Also, feel free to change the CSS if you want to. 
+In the "code" folder in this assignment you'll find a copy of the Technigo React starter project which you can use as a base to complete this assignment. In the terminal, "cd" into that folder and install dependencies by running `npm install`. Once that's done, you can start the project by running `npm start`.
 
-### Lots of help
+### Components
 
-On [React.js](https://reactjs.org/) there's actually an example of how to implement a simple todo app (scroll down to the examples on the page). Start by playing around with their code and implement the same functionality in your project. 
+As always, you're free to decide how to structure the project.
 
-Update their HTML to work with your CSS and then try yourself to implement that you can mark an item as completed. 
+One possible solution is to create an `App` component which stores an array of "todo" objects in its state. Each object could store the todo text, and a boolean which stores whether the todo is done or not. You could then map over these items in the array to mount a `TodoItem` component which could have all the html for a single item in, including the checkbox. Which the checkbox is clicked, you'll need to use a child-parent callback to pass that information up to the todo list.
 
 ### Hand in the assignment
-To complete this assignment, you need to fork this repository, add your code in the "code" folder, and then submit a pull request on GitHub (from your repository into the technigo one) for review. Read the guide on GitHub for more info on how to do this.
+
+To complete this assignment, you need to fork this repository, add your code in the "code" folder, and then submit a pull request on GitHub (from your repository into the Technigo one) for review.
 
 ### :books: Reading List
 
 * [React.js – the todo app example](https://reactjs.org/)
 * [A visual guide to React state](https://daveceddia.com/visual-guide-to-state-in-react/)
-
+* [Component Communication](https://www.andrewhfarmer.com/component-communication/)
+* [Forms in React](https://reactjs.org/docs/forms.html
+)
 ---
 
 ### :sos: How to get help
@@ -47,25 +49,29 @@ Learning how to think as a web developer is learning how to be an expert in prob
 
 ### :boom: Success!
 
-After completing this assignment you will be more confident in using React State for building smaller applications. 
+After completing this assignment you will be more confident in using React State for building smaller applications. You should also start to feel more comfortable controlling forms, and have an opportunity to implement a child -> parent component callback function.
 
 ---
 
 ### :runner: Stretch Goals
 
-Done with the main assignment? Here's some suggestions, big and small.
+Done with the main assignment? Here's some suggestions, big and small. Feel free to pick whatever, or think up your own!
 
-1. Showing a message when the list is empty
-1. Preventing items with empty text from being added. A simple way to do this is to prevent the function that adds an item from being called from the Form component when the value of the text field is “”.
-1. Try and package your app into a Chrome extension.
+1. Show a message when the list of todo items is empty
+1. Add a button to remove todo items
+1. Prevent items with empty text from being added. A simple way to do this is to prevent the function that adds an item from being called from the Form component when the value of the text field is a blank string
+1. Add a search field to filter todo items
+1. Try and package your app into a Chrome extension (see guide below)
 
 ⚠️ The guide below is from Tjejer Kodar in London 2015. I haven't had a chance to check if it is still correct or not. It should work, but have your finger ready on the google button if this doesn't work... ⚠️
+
+You will need to generate a build of the app by running `npm run build` before following the steps below. Also, the paths will need to be updated to reflect where index.html is in the build. Also, the icon will need to be pointed to public/icon.png.
 
 Chrome extensions are surprisingly simple to create. By packing the app as an extension, you’ll be able to run your todo app by clicking a button in the toolbar. All you need to do to package your app is to create a manifest, give it an icon, then install it in chrome. To create the manifest, make a new file called ´manifest.json´ in the ´code´ folder of this project. Within it, place this:
 ```
 {
   "manifest_version": 2,
-  "name": "Weather Dashboard",
+  "name": "TODO",
   "description": "",
   "version": "1.0",
   "browser_action": {
