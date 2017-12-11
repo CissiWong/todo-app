@@ -10,7 +10,7 @@ The plan is to build a todo app which can:
 
 We’ll of course build this in react! Here’s the basic component structure we’re going to aim for:
 
-![Design](https://github.com/Technigo/assignment-todo-app-1/blob/master/components-breakdown.png)
+![Design](https://github.com/Technigo/assignment-todo-app-1/raw/master/component-breakdown.png)
 
 ## How to complete this assignment
 
