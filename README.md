@@ -33,8 +33,8 @@ To complete this assignment, you need to fork this repository, add your code in 
 * [React.js – the todo app example](https://reactjs.org/)
 * [A visual guide to React state](https://daveceddia.com/visual-guide-to-state-in-react/)
 * [Component Communication](https://www.andrewhfarmer.com/component-communication/)
-* [Forms in React](https://reactjs.org/docs/forms.html
-)
+* [Forms in React](https://reactjs.org/docs/forms.html)
+
 ---
 
 ### :sos: How to get help
