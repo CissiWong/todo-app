@@ -31,7 +31,7 @@ class App extends React.Component {
   }
 
   findChange = () => {
-    if (this.item.done === false) {
+    if (this.state.items.done === false) {
       return false
     } else {
       return true
@@ -39,7 +39,7 @@ class App extends React.Component {
   }
 
   handleChange = () => {
-    this.state.items.find(findChange)
+    this.state.items.find(this.findChange)
   }
 
   render() {
