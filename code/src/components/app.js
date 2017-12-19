@@ -1,46 +1,61 @@
 import React from "react"
-import List from "./list"
+import ListItem from "./list"
 
 class App extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      term: "",
-      items: [],
-      complete: false
+      items: [
+        {
+          done: false,
+          text: "Yoga"
+        },
+
+        {
+          done: false,
+          text: "Lunchbox"
+        },
+
+        {
+          done: false,
+          text: "Assignment"
+        },
+
+        {
+          done: false,
+          text: "Group assignment"
+        }
+      ]
     }
   }
 
-  onChange = (event) => {
-    this.setState({
-      term: event.target.value
-    })
+  findChange = () => {
+    if (this.item.done === false) {
+      return false
+    } else {
+      return true
+    }
   }
 
-  onSubmit = (event) => {
-    event.preventDefault()
-    this.setState({
-      term: "",
-      items: [...this.state.items, this.state.term]
-    })
-  }
-
-  handleCheckBox = () => {
-    this.setState({
-      complete: !this.state.complete
-    })
+  handleChange = () => {
+    this.state.items.find(findChange)
   }
 
   render() {
     return (
       <div>
-        <form className="App" onSubmit={this.onSubmit}>
-          <input
-            value={this.state.term}
-            onChange={this.onChange} />
+        <form >
+          <input />
           <button>Submit</button>
-          <List items={this.state.items} />
+          <ul>
+            {this.state.items.map(item => (
+              <ListItem
+                text={item.text}
+                done={item.done}
+                lunchBox={this.handleChange} />
+            ))}
+          </ul>
         </form>
       </div>
     )

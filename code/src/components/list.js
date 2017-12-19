@@ -1,16 +1,32 @@
 import React from "react"
 
-const List = props => (
-  <ul>
-    {
-      props.items.map((item, index) =>
-        <li
-          key={index}>
-          {item}
-          <input type="checkbox" onChange={this.handleCheckBox} />
-        </li>)
+class ListItem extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      done: props.done
     }
-  </ul>
-)
+  }
 
-export default List
+  handleCheck = () => {
+    this.setState({
+      done: !this.state.done
+    }, () => {
+      this.props.lunchBox(this.state.done, this.props.text)
+    })
+  }
+
+  render() {
+    return (
+      <li>
+        <input
+          type="checkbox"
+          checked={this.state.done}
+          onChange={this.handleCheck} />
+        {this.props.text}
+      </li>
+    )
+  }
+}
+
+export default ListItem
