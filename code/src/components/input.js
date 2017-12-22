@@ -5,46 +5,39 @@ class Input extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      task: "",
-      todos: [""]
+      task: ""
     }
   }
 
   handleChange = (event) => {
     this.setState({
       task: event.target.value
+      // captures the value entered
     })
   }
 
   handleSubmit = (event) => {
     event.preventDefault()
-    const newItem = { text: this.state.task }
+    // below pass the value to app.js
+    this.props.OnNewTask(this.state.task)
+    // below emptying the input field
     this.setState({
-      todos: [newItem, ...this.state.todos]
+      task: ""
     })
   }
 
   render() {
     return (
+    // calls the handleChange function}
+    // calls the handleChange function
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
+            onChange={this.handleChange}
             type="text"
-            value={this.state.task}
-            onChange={this.handleChange} />
-          <button
-            onClick={this.handleSubmit}>Submit
-          </button>
+            value={this.state.task} />
+          <button>Submit</button>
         </form>
-        <ul>
-          {
-            this.state.todos.map(task => <Input
-              key={task.id}
-              id={task.id}
-              task={task.task}
-              done={task.done} />)
-          }
-        </ul>
       </div>
     )
   }
