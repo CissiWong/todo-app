@@ -19,7 +19,7 @@ class Input extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     // below pass the value to app.js
-    this.props.OnNewTask(this.state.task, this.state.index)
+    this.props.OnNewTask(this.state.task)
     // below emptying the input field
     this.setState({
       task: ""
@@ -29,16 +29,15 @@ class Input extends React.Component {
   render() {
     return (
     // calls the handleChange function}
-      <div className="form">
-        <form onSubmit={this.handleSubmit}>
-          <input
-            required
-            onChange={this.handleChange}
-            type="text"
-            value={this.state.task} />
-          <button className="submit">Submit</button>
-        </form>
-      </div>
+      <form onSubmit={this.handleSubmit}>
+        <input
+          className="input-field"
+          required
+          onChange={this.handleChange}
+          type="text"
+          value={this.state.task} />
+        <button className="submit">Submit</button>
+      </form>
     )
   }
 }

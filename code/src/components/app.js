@@ -7,19 +7,47 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      todos: []
+      todos: [
+        {
+          done: false,
+          text: "yoga"
+        },
+
+        {
+          done: false,
+          text: "study"
+        },
+
+        {
+          done: false,
+          text: "write"
+        }]
     }
   }
 
-  addTask = (anyRandomArgument) => {
+  addTask = (valueAdded) => {
     // newItem states how the info passed to the array and becomes the new "text"//
     const newItem = {
-      text: anyRandomArgument
+      text: valueAdded,
+      done: false
     }
-    // todos set the new state with text and fills the array.
+
     this.setState({
+      // todos set the new state with text and fills the array.
       todos: [newItem, ...this.state.todos]
     })
+  }
+
+  findCheck = () => {
+    if (this.state.todos.done === false) {
+      return false
+    } else {
+      return true
+    }
+  }
+
+  handleChange = () => {
+    this.state.todos.find(this.findCheck)
   }
 
   render() {
@@ -27,16 +55,20 @@ class App extends React.Component {
     // OnNewTask brings the value of task into app.js//}
     // addTask calls the function addTask//}
       <div className="form-container">
-        <Input OnNewTask={this.addTask} />
-        <ul className="list-render">
-          {
-            this.state.todos.map(task => (
-              <Task
-                index={task.index}
-                task={task.text}
-                done={task.done} />
-            ))}
-        </ul>
+        <Input
+          OnNewTask={this.addTask} />
+        <div className="list-render">
+          <ul>
+            {
+              this.state.todos.map(task => (
+                <Task
+                  index={task.index}
+                  task={task.text}
+                  done={task.done}
+                  change={this.handleChange} />
+              ))}
+          </ul>
+        </div>
       </div>
     )
   }

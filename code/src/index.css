@@ -5,25 +5,41 @@ body {
 }
 
 .form-container {
+  width: 50%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 100px auto 0 auto;
+}
+
+form {
+  display: flex;
   align-content: center;
   justify-content: center;
 }
 
 .input-field {
-  text-align: center;
-  padding: 5px;
+  font-size: 16px;
+  height: 20px;
+  width: 200px;
+  padding: 0 auto 0 5px;
 }
 
-.submit, .remove {
-  margin: 10px;
+.submit {
+  margin-left: 10px;
   padding: 5px;
   border: 1px solid #000;
   text-transform: uppercase;
 }
 
-.list-render {
-  flex-wrap: wrap;
-  
+.remove {
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  align-self: flex-end;
+}
+
+.complete {
+  margin: 10px;
+  border: 1px solid #000;
 }
