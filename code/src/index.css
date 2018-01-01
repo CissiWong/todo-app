@@ -3,3 +3,27 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.input-field {
+  text-align: center;
+  padding: 5px;
+}
+
+.submit, .remove {
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #000;
+  text-transform: uppercase;
+}
+
+.list-render {
+  flex-wrap: wrap;
+  
+}
