@@ -7,26 +7,9 @@ import Task from "./task"
 class App extends React.Component {
   constructor(props) {
     super(props)
+    const todos = JSON.parse(localStorage.getItem("newData"))
     this.state = {
-      todos: [
-        {
-          done: false,
-          text: "yoga",
-          id: uuid()
-        },
-
-        {
-          done: false,
-          text: "study",
-          id: uuid()
-
-        },
-
-        {
-          done: false,
-          text: "write",
-          id: uuid()
-        }]
+      todos: todos || []
     }
   }
 
@@ -41,6 +24,8 @@ class App extends React.Component {
     this.setState({
       // todos set the new state with text and fills the array.
       todos: [newItem, ...this.state.todos]
+    }, () => {
+      localStorage.setItem("newData", JSON.stringify(this.state.todos))
     })
   }
 
@@ -55,6 +40,8 @@ class App extends React.Component {
 
     this.setState({
       todos: newArray
+    }, () => {
+      localStorage.setItem("newData", JSON.stringify(this.state.todos))
     })
   }
 
@@ -63,6 +50,8 @@ class App extends React.Component {
     removedTaskArray.splice(id, 1)
     this.setState({
       todos: removedTaskArray
+    }, () => {
+      localStorage.setItem("newData", JSON.stringify(this.state.todos))
     })
   }
 
