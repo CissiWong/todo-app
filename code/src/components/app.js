@@ -1,5 +1,6 @@
 import React from "react"
 import "index.css"
+import uuid from "uuid/v4"
 import Input from "./input"
 import Task from "./task"
 
@@ -10,17 +11,21 @@ class App extends React.Component {
       todos: [
         {
           done: false,
-          text: "yoga"
+          text: "yoga",
+          id: uuid()
         },
 
         {
           done: false,
-          text: "study"
+          text: "study",
+          id: uuid()
+
         },
 
         {
           done: false,
-          text: "write"
+          text: "write",
+          id: uuid()
         }]
     }
   }
@@ -29,7 +34,8 @@ class App extends React.Component {
     // newItem states how the info passed to the array and becomes the new "text"//
     const newItem = {
       text: valueAdded,
-      done: false
+      done: false,
+      id: uuid()
     }
 
     this.setState({
@@ -38,16 +44,18 @@ class App extends React.Component {
     })
   }
 
-  findCheck = () => {
-    if (this.state.todos.done === false) {
-      return false
-    } else {
-      return true
-    }
-  }
+  handleChange = (id) => {
+    console.log("handle change", id)
+    const newArray = this.state.todos.map((x) => {
+      if (x.id === id) {
+        x.done = !x.done
+      }
+      return x
+    })
 
-  handleChange = () => {
-    this.state.todos.find(this.findCheck)
+    this.setState({
+      todos: newArray
+    })
   }
 
   render() {
@@ -62,7 +70,8 @@ class App extends React.Component {
             {
               this.state.todos.map(task => (
                 <Task
-                  index={task.index}
+                  key={task.id}
+                  id={task.id}
                   task={task.text}
                   done={task.done}
                   change={this.handleChange} />
