@@ -6,6 +6,10 @@ export default class Task extends React.Component {
     this.props.change(this.props.id)
   }
 
+  handleRemove = () => {
+    this.props.remove(this.props.id)
+  }
+
   render() {
     return (
       <div className="new-task-box">
@@ -18,6 +22,7 @@ export default class Task extends React.Component {
           {this.props.task}
           <button
             className="remove"
+            onClick={this.handleRemove}
             type="button">Remove
           </button>
         </label>

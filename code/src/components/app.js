@@ -58,6 +58,14 @@ class App extends React.Component {
     })
   }
 
+  removeTask = (id) => {
+    const removedTaskArray = [...this.state.todos]
+    removedTaskArray.splice(id, 1)
+    this.setState({
+      todos: removedTaskArray
+    })
+  }
+
   render() {
     return (
     // OnNewTask brings the value of task into app.js//}
@@ -74,7 +82,8 @@ class App extends React.Component {
                   id={task.id}
                   task={task.text}
                   done={task.done}
-                  change={this.handleChange} />
+                  change={this.handleChange}
+                  remove={this.removeTask} />
               ))}
           </ul>
         </div>
