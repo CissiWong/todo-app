@@ -11,21 +11,31 @@ ul {
   margin: 0;
 }
 
+
 .form-container {
-  border: 1px solid #fff;
-  padding: 60px;
-  width: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  border: 1px solid #fff;
+  padding: 60px;
+  width: 50%;
   margin: 100px auto 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.new-task-box {
+  display: flex;
+  width: 300px;
+  height: 20px;
+
 }
 
 .list-render {
   margin-top: 20px;
-  justify-content: flex-start;
+  width: 500px;
 }
+
 
 .input-field {
   border: 1px solid #000;
@@ -45,14 +55,31 @@ ul {
   background-color: #f9e4a8;
 }
 
-.remove {
-  margin: 10px;
-  align-self: flex-end;
-  padding: 5px;
-  border: 1px solid #000;
-  text-transform: uppercase;
-  align-self: flex-end;
+button {
+  justify-content: flex-end;
 }
+
+.remove {
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+  color: #666666;
+  border-radius: 20px;
+  border: 0;
+  background-color: transparent;
+  font-size: 16px;
+  display: block;
+  line-height: 0px;
+  padding: 11px 3px;
+}
+
+.remove:before {
+ content: "×";
+ margin-top: auto;
+ margin-bottom: auto;
+ float: right;
+}
+
 .remove:hover {
-  background-color: #96ceab;
+  color: black;
 }

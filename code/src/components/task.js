@@ -12,20 +12,20 @@ export default class Task extends React.Component {
 
   render() {
     return (
+
       <div className="new-task-box">
-        <label>
-          <input
-            className="complete"
-            type="checkbox"
-            checked={this.props.done}
-            onChange={this.handleCheck} />
+        <input
+          className="complete"
+          type="checkbox"
+          checked={this.props.done}
+          onChange={this.handleCheck} />
+        <span className="text">
           {this.props.task}
-          <button
-            className="remove"
-            onClick={this.handleRemove}
-            type="button">Remove
-          </button>
-        </label>
+        </span>
+        <button
+          className="remove"
+          onClick={this.handleRemove}
+          type="button" />
       </div>
     )
   }
